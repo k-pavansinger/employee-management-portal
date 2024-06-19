@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar and Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li class="dropdown">
+                <a href="#leave-management">Leave Management</a>
+                <ul class="dropdown-content">
+                    <li><a href="#leave-balance">Leave Balance</a></li>
+                    <li><a href="#leave-request">Leave Request</a></li>
+                    <li><a href="#leave-history">Leave History</a></li>
+                </ul>
+            </li>
+            <li><a href="#holiday-calendar">Holiday Calendar</a></li>
+        </ul>
+    </div>
+    <div class="main-content" id="main-content">
+        <div class="navbar">
+            <div class="toggle-button" id="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <div class="navbar-image-container">
+                <img src="https://www.1digitals.com/images/favicon.png" alt="" srcset="" class="navbar-image">
+            </div>
+
+            <a href="#logout" class="logout">logout</a>     
+            
+        </div>
+        <div class="main-content-container">
+            <h1>Welcome to MyApp</h1>
+            <p>This is a responsive sidebar and top navbar design.</p>
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('main-content');
+
+        toggleButton.addEventListener('click', (event) => {
+            event.stopPropagation();  // Prevent the click event from propagating to the mainContent
+            sidebar.classList.add('active');
+            mainContent.classList.add('shifted');
+        });
+
+        mainContent.addEventListener('click', () => {
+            if (sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                mainContent.classList.remove('shifted');
+            }
+        });
+    </script>
+</body>
+</html>

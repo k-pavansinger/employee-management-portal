@@ -1,0 +1,159 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    padding-top: 25px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    background-color: #444;
+    padding-left: 20px;
+    border-radius: 10%;
+}
+
+.sidebar ul li .dropdown-content li {
+    padding: 10px 0;
+}
+
+.sidebar ul li.dropdown:hover .dropdown-content {
+    max-height: 500px; /* Set to a value larger than the expected height of the dropdown */
+    opacity: 1;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: calc(100% - 250px);
+    top: 0;
+    left: 250px;
+    transition: left 0.3s;
+    z-index: 999;
+    height: 6%;
+}
+
+.navbar .logout{
+    margin-right: 2em;
+    border: none;
+    border-radius: 10%;
+    padding: 1%;
+    background-color: darksalmon;
+    text-decoration: none;
+    color: black;
+}
+.navbar .toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar .toggle-button .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.navbar-image-container {
+    margin: 0 auto;
+}
+
+.navbar .navbar-image {
+    max-height: 50px; /* Adjust this value to fit your design */
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 250px;
+    position: fixed;
+    top: 10%;
+    bottom: 0;
+    padding: 20px;
+    overflow: hidden; /* Ensure that main-content doesn't overflow the viewport */
+    transition: margin-left 0.3s;
+}
+
+.main-content-container {
+    max-height: 100%; /* Ensure the container takes up the available height */
+    overflow-y: auto;
+    padding-bottom: 20px; /* Add padding to the bottom */
+}
+
+
+.main-content h1 {
+    font-size: 24px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar .toggle-button {
+        display: flex;
+    }
+
+    .sidebar {
+        left: -250px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .main-content.shifted {
+        margin-left: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content h1 {
+        font-size: 20px;
+    }
+}
