@@ -11,7 +11,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333;
+    /* background-color: #333; */
+    background-image: linear-gradient(to right, #010202, #2c5364);
     color: #fff;
     padding-top: 25px;
     transition: 0.3s;
@@ -41,8 +42,7 @@ body {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    background-color: #444;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
     padding-left: 20px;
     border-radius: 10%;
 }
@@ -60,7 +60,7 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    background-color: #333;
+    background-image: linear-gradient(to right, #2c5364,#010202);
     color: #fff;
     padding: 10px 20px;
     position: fixed;
