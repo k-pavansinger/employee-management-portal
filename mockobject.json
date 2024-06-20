@@ -1,0 +1,40 @@
+{
+    "roles": {
+      "manager": [
+        { "text": "Profile", "href": "#profile" },
+        { "text": "Leave Management", "sublinks": [
+          { "text": "Leave Balance & Request page", "href": "#leave-balance" },
+          { "text": "Leave History", "href": "#leave-history" },
+          { "text": "Team Members Leave Request", "href": "#Team Members Leave Request" },
+          { "text": "Team Members Leave History", "href": "#Team Members Leave History" }
+        ]},
+        { "text": "Holiday Calendar", "href": "#holiday-calendar" },
+        { "text": "Projects List", "href": "#Projects List" }
+      ],
+      "hr": [
+        { "text": "Profile", "href": "#profile" },
+        { "text": "Leave Management", "sublinks": [
+          { "text": "Leave Balance & Request page", "href": "#leave-balance" },
+          { "text": "Leave History", "href": "#leave-history" },
+          { "text": "Employees Leave Request", "href": "#Employees Leave Request" },
+          { "text": "Employees Leave History", "href": "#Employees Leave History" }
+        ]},
+        { "text": "Holiday Calendar", "sublinks": [
+          { "text": "View Calendar", "href": "#View Calendar" },
+          { "text": "Make Changes", "href": "#Make Changes" }
+        ]},
+        { "text": "Employee Registration", "href": "#Employee Registration" },
+        { "text": "Employee Information Page", "href": "#Employee Information Page" },
+        { "text": "Projects List", "href": "#Projects List" }
+      ],
+      "employee": [
+        { "text": "Profile", "href": "#profile" },
+        { "text": "Leave Management", "sublinks": [
+          { "text": "Leave Balance & Request page", "href": "#leave-balance" },
+          { "text": "Leave History", "href": "#leave-history" }
+        ]},
+        { "text": "Holiday Calendar", "href": "#holiday-calendar" }
+      ]
+    }
+  }
+  
