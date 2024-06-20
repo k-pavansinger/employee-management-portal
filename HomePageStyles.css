@@ -56,6 +56,10 @@ body {
     opacity: 1;
 }
 
+.sidebar ul li .dropdown-pointer-style{
+    cursor: pointer;
+}
+
 /* Navbar styles */
 .navbar {
     display: flex;
@@ -111,6 +115,8 @@ body {
     padding: 20px;
     overflow: hidden; /* Ensure that main-content doesn't overflow the viewport */
     transition: margin-left 0.3s;
+    left: 0;
+    right: 0;
 }
 
 .main-content-container {
